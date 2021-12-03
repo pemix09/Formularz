@@ -4,20 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylsheet' href="./style.css"></link>
+    <link rel='stylesheet' href="./style.css"></link>
     <title>Document</title>
 </head>
 <body>
     <div class = 'Library'>
-        <div class='Form'>
-            <form>
+        <div class='FormDiv'>
+            <form class='Form'>
+                <h2>Dodaj książkę tutaj</h2>
                 <input id='title' class='BookTitle input' placeholder="Tytuł książki"></input>
                 <input id='author' class='BookAuthor input' placeholder="Autor książki"></input>
-                <div></div>
+                <label>Priorytet</label>
+                <div class='input'>
+                    <input type='radio' id='Priority1' name='priority' value='1'></input>
+                    <label for='Priority1'>*</label>
+                    <input type='radio' id='Priority2' name='priority' value='2'></input>
+                    <label for='Priority2'>**</label>
+                    <input type='radio' id='Priority3' name='priority' value='3'></input>
+                    <label for='Priority3'>***</label>
+                    <input type='radio' id='Priority4' name='priority' value='4'></input>
+                    <label for='Priority4'>****</label>
+                    <input type='radio' id='Priority5' name='priority' value='5'></input>
+                    <label for='Priority5'>*****</label>
+                </div>
+                    <select id="categories" class='input' name="category">
+                        <option value="none" selected disabled hidden>Wybierz kategorię</option>
+                        <option value="Powieść fantasy">Powieść fantasy</option>
+                        <option value="Romans">Romans</option>
+                        <option value="Kryminał">Kryminał</option>
+                    </select>
+                <div class='input submit' id='submit'>Dodaj!</div>
             </form>
         </div>
         <div class='Books'>
-
+            <h1>Książki:</h1>
         </div>
     </div>
     <script src='./script.js'></script>
